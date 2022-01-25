@@ -50,13 +50,8 @@
                             Play
                         </ContentControl>
                     </Button.Content>
-                    <Button.Resources>
-                        <Style TargetType="{x:Type Border}">
-                            <Setter Property="CornerRadius" Value="15"/>
-                        </Style>
-                    </Button.Resources>
                 </Button>
-                <Button Grid.Row="1">
+                <Button Grid.Row="1" Command="{Binding CreateAccount}"> 
                     <Button.Content>
                         <ContentControl>
                             <TextBlock TextAlignment="Center">

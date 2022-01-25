@@ -21,7 +21,6 @@
                 <Setter Property="Height" Value="40"/>
             </Style>
             <Style TargetType="Button">
-                <Setter Property="FontFamily" Value="/Resources/Fonts/RubikOne.ttf #Rubik One"/>
                 <Setter Property="Foreground" Value="#27386C"/>
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="Width" Value="180"/>
@@ -46,7 +45,7 @@
             </Grid.ColumnDefinitions>
             <Image Grid.Column="0"  VerticalAlignment="Bottom">
                 <Image.Source>
-                    <BitmapImage UriSource="/Resources/Images/ZSEL_Logo_Left.png"/>
+                    <BitmapImage UriSource="C:\Users\devdb\source\repos\RyyyyC\ZSEL_QuizzApp\Resources\Images\ZSEL_Logo_Left.png"/>
                 </Image.Source>
             </Image>
             <Grid Grid.Column="1">
@@ -95,7 +94,7 @@
             </Grid>
             <Image Grid.Column="2"  VerticalAlignment="Top">
                 <Image.Source>
-                    <BitmapImage UriSource="/Resources/Images/ZSEL_Logo_Right.png"/>
+                    <BitmapImage UriSource="C:\Users\devdb\source\repos\RyyyyC\ZSEL_QuizzApp\Resources\Images\ZSEL_Logo_Right.png"/>
                 </Image.Source>
             </Image>
         </Grid>

@@ -9,5 +9,8 @@
         <Style TargetType="Label">
             <Setter Property="FontFamily" Value="C:/Users/devdb/source/repos/RyyyyC/ZSEL_QuizzApp/Resources/Fonts/RubikOne.ttf #Rubik One"/>
         </Style>
+        <Style TargetType="Border">
+            <Setter Property="CornerRadius" Value="15"/>
+        </Style>
     </Application.Resources>
 </Application>

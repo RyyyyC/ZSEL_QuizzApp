@@ -13,17 +13,17 @@ namespace ZSEL_QuizzApp.ViewModels
     public class StartViewModel : ViewModelBase
     {
         private NavigationStore navigationStore;
-        public StartViewModel()
+        public StartViewModel(NavigationStore navigationStore)
         {
-            
+            this.navigationStore = navigationStore;
         }
-        public ICommand PlayCommand
+        public ICommand CreateAccount
         {
             get
             {
                 return new RelayCommand(x =>
                 {
-                    navigationStore.CurrentViewModel = new StartViewModel(); 
+                    navigationStore.CurrentViewModel = new RegisterViewModel();
                 });
             }
         }

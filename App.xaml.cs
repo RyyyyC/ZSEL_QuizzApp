@@ -24,7 +24,7 @@ namespace ZSEL_QuizzApp
 
         protected override void OnStartup(StartupEventArgs e)
         {
-            navigationStore.CurrentViewModel = new StartViewModel();
+            navigationStore.CurrentViewModel = new StartViewModel(navigationStore);
             MainWindow = new MainWindow()
             {
                 DataContext = new MainViewModel(navigationStore)
