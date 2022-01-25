@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using ZSEL_QuizzApp.Commands;
+using ZSEL_QuizzApp.Store;
 
 namespace ZSEL_QuizzApp.ViewModels
 {
     public class StartViewModel : ViewModelBase
     {
+        private NavigationStore navigationStore;
         public StartViewModel()
         {
             
@@ -21,7 +23,7 @@ namespace ZSEL_QuizzApp.ViewModels
             {
                 return new RelayCommand(x =>
                 {
-                    MessageBox.Show("1");
+                    navigationStore.CurrentViewModel = new StartViewModel(); 
                 });
             }
         }
