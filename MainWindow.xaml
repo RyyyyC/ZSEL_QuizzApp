@@ -17,6 +17,15 @@
             <DataTemplate DataType="{ x:Type viewmodels:RegisterViewModel}">
                 <views:RegisterView/>
             </DataTemplate>
+            <DataTemplate DataType="{ x:Type viewmodels:LoginViewModel}">
+                <views:LoginView/>
+            </DataTemplate>
+            <DataTemplate DataType="{ x:Type viewmodels:AnimationViewModel}">
+                <views:AnimationView/>
+            </DataTemplate>
+            <DataTemplate DataType="{ x:Type viewmodels:QuestionViewModel}">
+                <views:QuestionView/>
+            </DataTemplate>
         </Grid.Resources>
         <ContentControl Content="{Binding CurrentViewModel}"/>
     </Grid>

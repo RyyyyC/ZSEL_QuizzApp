@@ -23,7 +23,27 @@ namespace ZSEL_QuizzApp.ViewModels
             {
                 return new RelayCommand(x =>
                 {
-                    navigationStore.CurrentViewModel = new RegisterViewModel();
+                    navigationStore.CurrentViewModel = new RegisterViewModel(navigationStore);
+                });
+            }
+        }
+        public ICommand Login
+        {
+            get
+            {
+                return new RelayCommand(x =>
+                {
+                    navigationStore.CurrentViewModel = new LoginViewModel(navigationStore);
+                });
+            }
+        }
+        public ICommand PlayCommand
+        {
+            get
+            {
+                return new RelayCommand(x =>
+                {
+                    navigationStore.CurrentViewModel = new AnimationViewModel(navigationStore);
                 });
             }
         }
