@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="ZSEL_QuizzApp.Views.RegisterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZSEL_QuizzApp.Views"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+             mc:Ignorable="d" 
+             Width="800"
+             Height="600">
+    <Grid>
+        <Grid.Resources>
+            <Style TargetType="TextBox">
+                <Setter Property="Width" Value="180"/>
+                <Setter Property="Height" Value="40"/>
+            </Style>
+            <Style TargetType="PasswordBox">
+                <Setter Property="Width" Value="180"/>
+                <Setter Property="Height" Value="40"/>
+            </Style>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Register" FontSize="80" Foreground="#27386C" HorizontalAlignment="Center" Margin="0 40">
+            <Label.BitmapEffect>
+                <DropShadowBitmapEffect Color="Black" Direction="270" ShadowDepth="10" Opacity=".5" Softness="9" />
+            </Label.BitmapEffect>
+        </Label>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0"  VerticalAlignment="Bottom">
+                <Image.Source>
+                    <BitmapImage UriSource="C:\Users\kamil\Source\Repos\RyyyyC\ZSEL_QuizzApp\Resources\Images\ZSEL_Logo_Left.png"/>
+                </Image.Source>
+            </Image>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" FontSize="35" Foreground="#27386C" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                    <Label.Content>
+                        Username
+                    </Label.Content>
+                </Label>
+                <TextBox Grid.Row="1" VerticalAlignment="Top"  FontSize="30" Text="{Binding Username}">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <Label Grid.Row="1" FontSize="35" Foreground="#27386C" HorizontalAlignment="Center" VerticalAlignment="Bottom">
+                    <Label.Content>
+                        Password
+                    </Label.Content>
+                </Label>
+                <PasswordBox Grid.Row="2" VerticalAlignment="Top" FontSize="30" x:Name="textBoxPassword" >
+                    <PasswordBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </PasswordBox.Resources>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="PasswordChanged">
+                            <i:InvokeCommandAction Command="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=PasswordBox}}" CommandParameter="{Binding ElementName=PasswordBox}"/>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </PasswordBox>
+                <Button Grid.Row="3" Height="70" Command="{Binding Register}" CommandParameter="{Binding ElementName=textBoxPassword}">
+                    <Button.Content>
+                        <ContentControl>
+                            <TextBlock TextAlignment="Center" >
+                                Register
+                            </TextBlock>
+                        </ContentControl>
+                    </Button.Content>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="15"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Grid.Row="4"  Height="70" Command="{Binding ExitToMainMenu}">
+                    <Button.Content>
+                        <ContentControl>
+                            <TextBlock TextAlignment="Center" >
+                                Exit
+                            </TextBlock>
+                        </ContentControl>
+                    </Button.Content>
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="15"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+            <Image Grid.Column="2"  VerticalAlignment="Top">
+                <Image.Source>
+                    <BitmapImage UriSource="C:\Users\kamil\Source\Repos\RyyyyC\ZSEL_QuizzApp\Resources\Images\ZSEL_Logo_Right.png"/>
+                </Image.Source>
+            </Image>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ZSEL_QuizzApp.Views
 {
     /// <summary>
-    /// Logika interakcji dla klasy MainView.xaml
+    /// Logika interakcji dla klasy QuestionView.xaml
     /// </summary>
-    public partial class MainView : UserControl
+    public partial class QuestionView : UserControl
     {
-        public MainView()
+        public QuestionView()
         {
             InitializeComponent();
         }
